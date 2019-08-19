@@ -6,7 +6,7 @@ const REJECTED = "rejected"
 class Promsie {
     constructor(excutor) {
         this.status = PENDING;
-        this.data = undefined;
+        this.data = undefined; 
         this.reason = undefined;
         this.fullfilledCallbacks = [];
         this.rejectedCallbacks = [];
