@@ -3,25 +3,22 @@ const Promise = require("./promise");
 
 let a = new Promise((resolve, reject) => {
     setTimeout(() => {
-        resolve({
-            then() {
 
-            }
-        })
+        resolve(1111)
+    }, 1000)
+})
+let b = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        reject(1223333)
     }, 1000)
 })
 
-a.then(
-    data => {
-        console.log(data)
-        return data;
-    },
-    err => {
-        console.log(err)
-        return err
+a.finally(e=>{
+    console.log("e",e)
+})
 
-    }).then(data => {
-        console.log("data", data)
-    }, err => {
-        console.log("err", err)
-    })
+
+
+// Promise.race([a, b]).then(data => {
+//     console.log(data)
+// })
