@@ -152,8 +152,7 @@ class Promise {
     }
 
 
-    static
-    finally(fn) {
+    static finally(fn) {
         return this.then(
 
         )
